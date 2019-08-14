@@ -10,7 +10,7 @@ $blockquote-border: $dove-grey !default;
 body {
   margin: 0;
   padding: 0;
-  background: $body-background url("../images/bkg1.png") 0 0;
+  background: $body-background url("../images/cartographer.png") 0 0;
   color: $body-foreground;
   font-size: 16px;
   line-height: 1.5;
@@ -67,11 +67,12 @@ header h1 {
 }
 
 header h1:before {
-  content: "./ ";
+  content: ">./ ";
   font-size: 24px;
 }
 
 header h2 {
+  content: "// ";
   font-size: 18px;
   font-weight: 300;
   color: #666;
