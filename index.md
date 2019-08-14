@@ -1,4 +1,3 @@
-Site not yet operational
 ---
 layout: default
 ---
