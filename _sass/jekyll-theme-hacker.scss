@@ -6,13 +6,19 @@ $body-foreground: $gallery !default;
 $header: $conifer !default;
 $blockquote-color: $silver-chalice !default;
 $blockquote-border: $dove-grey !default;
+html{
+  height: 100%;
+  background: $body-background url("../images/cartographer.png");
+}
 
 body {
   margin: 0;
   padding: 0;
-  background: $body-background url("../images/cartographer.png") 0 0;
+  top: 20;
+
+  height: 100%;
   color: $body-foreground;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.5;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
@@ -48,8 +54,8 @@ header {
   background: rgba(0, 0, 0, 0.4);
   width: 100%;
   border-bottom: 1px dashed $conifer; //header;
-  padding: 20px 0;
-  margin: 0 0 40px 0;
+  padding: 0px 0;
+  margin: 0 0 40px 0px;
 }
 
 header h1 {
@@ -91,6 +97,7 @@ header h2 {
 
 #main_content {
   width: 100%;
+
   -webkit-font-smoothing: antialiased;
 }
 section img {
@@ -152,10 +159,10 @@ blockquote {
 }
 
 pre {
-  background: rgba(0, 0, 0, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.356);
+  border: 1px dashed rgba(179, 147, 4, 0.658);
   padding: 10px;
-  font-size: 16px;
+  font-size: 12px;
   color: #b5e853;
   border-radius: 2px;
   word-wrap: normal;
@@ -193,44 +200,6 @@ hr {
   border-bottom: 1px dashed #b5e853;
   color: #b5e853;
 }
-
-/* Buttons
-*/
-
-.btn {
-  display: inline-block;
-  background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
-  padding: 8px 18px;
-  border-radius: 50px;
-  border: 2px solid rgba(0, 0, 0, 0.7);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
-  border-top: 2px solid rgba(0, 0, 0, 1);
-  color: rgba(255, 255, 255, 0.8);
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-size: 13px;
-  text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-.btn:hover {
-  background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
-}
-
-.btn .icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin: 1px 8px 0 0;
-  float: left;
-}
-
-.btn-github .icon {
-  opacity: 0.6;
-  background: url("../images/blacktocat.png") 0 0 no-repeat;
-}
-
 /* Links
    a, a:hover, a:visited
 */
@@ -257,7 +226,108 @@ a {
 footer {
   background: rgba(0, 0, 0, 0.4);
   width: 100%;
-  border-bottom: 1px dashed $conifer; //header;
+  border-top: 1px dashed $conifer; //header;
   padding: 10px 0;
-  margin: 0 0 20px 0;
+  margin: 0 0 0 0px;
+  bottom: 0;
+
+
+}
+
+.main-content {
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .menu {
+      opacity: 100;
+      margin-left: auto;
+  }
+  #sidenav {
+      margin-left: -260px;
+      transition: 0.5s;
+
+      position: fixed;
+      left: 0;
+      top:0;
+      bottom:0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background: rgba(0, 0, 0, 0.4);
+      width: 260px;
+    
+      border-right: 1px dashed $conifer; //header;
+
+  }
+  #content {
+      margin-left: 0px;
+      transition: 0.5s;
+  }
+  #sidenav.sidenav-open {
+      opacity: 100;
+      margin-left: 0;
+      transition: 0.5s;
+  }
+  #content.sidenav-open {
+      margin-left: 0;
+      transition: 0.5s;
+  }
+}
+
+.menu {
+  opacity: 0;
+  margin-left: -40px;
+}
+
+#sidenav {
+  position: fixed;
+  left: 0;
+  top:0;
+  bottom:0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.4);
+  width: 260px;
+
+  border-right: 1px dashed $conifer; //header;
+}
+
+.feather {
+  height: 1.2em;
+}
+.icon-med {
+  height: 2em;
+}
+.icon-lg {
+  height: 3em;
+}
+
+@media print {
+
+  nav {
+      display: none;
+  }
+  img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+  }
+  a {
+      text-decoration: none;
+  }
+  a:after {
+      content:" ["attr(href)"]";
+  }
+#sidebar {
+  display: none;
+}
+#copyright-notice {
+  display: none;
+}
+.uk-logo {
+  display: none;
+}
+.uk-hidden {
+  display: block !important;
+}
 }
