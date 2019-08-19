@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
+  
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,54 +13,48 @@
   </head>
  <!-- side navigation bar -->
  <div class="uk-light" id="sidenav">
-  <div class="uk-clearfix">
-    <a class="uk-navbar-item uk-float-left menu" id="menu-sidenav" href="#sidenav" onclick="toggleSidenav()"><span data-feather="arrow-left">close menu</span></a>
-  </div>
+   
+
+
+  <div class="uk-float-right"> <a class="uk-nav-default uk-nav-parent-icon" id="menu-sidenav" href="#sidenav" onclick="toggleSidenav()"><span class="uk-margin-right"data-feather="chevron-left">close menu</span></a></div>
   <div class="bar-wrap">
     <ul class="uk-nav-default uk-nav-parent-icon" uk-nav="">
-      <li class="uk-nav-header">Site map</li>
+      <li class="uk-nav-header"><br><br><br><br><br><br>Site map</li>
       <li>
         <a href="/"><span class="uk-margin-right" data-feather="home">home</span>Home</a>
       </li>
       <li>
-        <a href="/about"><span class="uk-margin-right" data-feather="info">info</span>About</a>
+        <a href="/about"><span class="uk-margin-right" data-feather="coffee">info</span>About</a>
       </li>
-      <li>
-        <a href="/contact"><span class="uk-margin-right" data-feather="user">user</span>Contact</a>
-      </li>
-      <li>
-        <a href="/resume"><span class="uk-margin-right" data-feather="file">file</span>Résumé</a>
-      </li>
+
       <li class="uk-parent">
-        <a href="#"><span class="uk-margin-right" data-feather="cpu">box</span>Projects</a>
+        <a href="#"><span class="uk-margin-right" data-feather="cpu"></span>Projects</a>
         <ul class="uk-nav-sub">
           <li>
-            <a href="/projects#code">Code</a>
+            <a href="/projects#code"><span class="uk-margin-right" data-feather="terminal"></span>Code</a>
           </li>
           <li>
-            <a href="/projects#pres">Presentations</a>
+            <a href="/projects#pres"><span class="uk-margin-right" data-feather="book-open"></span>Reading</a>
           </li>
-          <li>
-            <a href="/projects#art">Art</a>
-          </li>
+
         </ul>
       </li>
       <li class="uk-parent">
-        <a href="#"><span class="uk-margin-right" data-feather="edit-3">pencil</span>Blog</a>
+        <a href="#"><span class="uk-margin-right" data-feather="edit-3"></span>Blog</a>
         <ul class="uk-nav-sub">
           <li>
-            <a href="./blog">Ramblings</a>
+            <a href="./blog"><span class="uk-margin-right" data-feather="code"></span>Tech</a>
           </li>
           <li>
-            <a href="/blog#microblog">Micro-blogs</a>
+            <a href="/blog#microblog"><span class="uk-margin-right" data-feather="twitter"></span>Micro-blog</a>
           </li>
           <li>
-            <a href="/blog#coop">Co-op Reflections</a>
+            <a href="/blog#misc"><span class="uk-margin-right" data-feather="headphones"></span>Misc</a>
           </li>
         </ul>
       </li>
       <li>
-        <a href="/awards"><span class="uk-margin-right" data-feather="award">award</span>Awards</a>
+        <a href="/awards"><span class="uk-margin-right" data-feather="award">award</span>Achievements</a>
       </li>
       <li class="uk-nav-header">Other links</li>
       <li>
@@ -67,9 +62,6 @@
       </li>
       <li>
         <a href="https://github.com/script-cowboy" target="_blank"><span class="uk-margin-right" data-feather="github">github</span>GitHub</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/keyboard-cowboy" target="_blank"><span class="uk-margin-right" data-feather="twitter">twitter&gt;</span>Twitter</a>
       </li>
     </ul>
     <!-- copyright year -->
@@ -86,12 +78,15 @@
   <body>
 
     <header>
-      <div class="container">
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-
-
-        <section id="downloads">
-        </section>
+        
+        <a href="#!" onclick="toggleSidenav()"><span class="uk-margin-right" data-feather="menu">Menu</span></a>Menu<h1 class="uk-text-center"><span>{{ site.title | default: site.github.repository_name }}<span class="blink_text">_</span></span></h1>
+    </div>
+        
+       
+        
+      
+          
+        
       </div>
     </header>
 
@@ -103,13 +98,14 @@
     </div>
     
     <div id="copyright-notice" class="uk-modal-container" uk-modal="">
-
-        <h2 class="uk-modal-title">Copyright notice</h2>
+      <h4 class="uk-modal-close"><span class="uk-margin-right" data-feather="x">close</span></h4>
+        <h2 class="uk-modal-title">Notice</h2>
         <p><br>
         All opinions are my own and do not represent any entity other than myself.  
         All code found on this website is subject to the terms under which it is licensed. See each project for more specific details.</p>
         <p>Built using open-source software. This page is rendered using <a href="https://getuikit.com" target="_blank">UI Kit</a> and <a href="https://feathericons.com" target="_blank">Feather Icons</a>, and is readily served by <a href="https://pages.github.com/" target="_blank">GitHubPages</a>.</p>
-      </div>
+
+        </div>
     
   </body>
   <script src="/js/uk/uikit.min.js"></script>

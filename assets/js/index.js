@@ -1,5 +1,7 @@
 feather.replace();
-
+window.onload = function() {
+    openSidenav();
+  };
 function openSidenav() {
     document.getElementById("sidenav").classList.add("sidenav-open");
 }

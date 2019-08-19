@@ -14,8 +14,8 @@ html{
 body {
   margin: 0;
   padding: 0;
-  top: 20;
-
+  top: 20px;
+  background: $body-background url("../images/cartographer.png");
   height: 100%;
   color: $body-foreground;
   font-size: 12px;
@@ -44,14 +44,9 @@ li {
   line-height: 1.4 ;
 }
 
-/* Header, <header>
-   header   - container
-   h1       - project name
-   h2       - project description
-*/
 
 header {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.158);
   width: 100%;
   border-bottom: 1px dashed $conifer; //header;
   padding: 0px 0;
@@ -66,10 +61,14 @@ header h1 {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color: $conifer;//$header;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4),
-               0 0 5px rgba(230, 232, 83, 0.4),
-               0 0 10px rgba(230, 232, 83, 0.4);
+               0 0 5px $shadow,
+               0 0 10px $shadow;
   letter-spacing: -1px;
   -webkit-font-smoothing: antialiased;
+}
+header .feather {
+  height: 3.2em;
+  color: $conifer;
 }
 
 header h1:before {
@@ -86,11 +85,7 @@ header h2 {
   color: #666;
 }
 
-#downloads .btn {
-  display: inline-block;
-  text-align: center;
-  margin: 0;
-}
+
 
 /* Main Content
 */
@@ -109,9 +104,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color: $header;
   letter-spacing: -0.03em;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4),
-               0 0 5px rgba(230, 232, 83, 0.4),
-               0 0 10px rgba(230, 232, 83, 0.4);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.74),
+  0 0 5px $shadow,
+  0 0 10px $shadow;
 }
 
 #main_content h1 {
@@ -149,21 +144,23 @@ dt {
 }
 
 ul li {
-  list-style-image:url('../images/bullet.png');
+  //list-style-image:url('../images/bullet.png');
+
 }
 
 blockquote {
   color: $blockquote-color;
   padding-left: 10px;
   border-left: 1px dotted $blockquote-border;
+  font-size: 12px;
 }
 
 pre {
   background: rgba(0, 0, 0, 0.356);
-  border: 1px dashed rgba(179, 147, 4, 0.658);
+  border: 1px dashed rgb(241, 112, 112);
   padding: 10px;
   font-size: 12px;
-  color: #b5e853;
+  color: #53dee8;
   border-radius: 2px;
   word-wrap: normal;
   overflow: auto;
@@ -186,7 +183,7 @@ table {
 
 th {
   text-align: left;
-  border-bottom: 1px dashed #b5e853;
+  border-bottom: 1px dashed $conifer;
   padding: 5px 10px;
 }
 
@@ -197,8 +194,8 @@ td {
 hr {
   height: 0;
   border: 0;
-  border-bottom: 1px dashed #b5e853;
-  color: #b5e853;
+  border-bottom: 1px dashed $conifer;
+  color: $conifer;
 }
 /* Links
    a, a:hover, a:visited
@@ -238,7 +235,7 @@ footer {
   height: 100%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 4620px){
   .menu {
       opacity: 100;
       margin-left: auto;
@@ -246,18 +243,7 @@ footer {
   #sidenav {
       margin-left: -260px;
       transition: 0.5s;
-
-      position: fixed;
-      left: 0;
-      top:0;
-      bottom:0;
-      overflow-x: hidden;
-      overflow-y: auto;
-      background: rgba(0, 0, 0, 0.4);
-      width: 260px;
-    
-      border-right: 1px dashed $conifer; //header;
-
+      background: rgba(66, 64, 64, 0.993);
   }
   #content {
       margin-left: 0px;
@@ -274,11 +260,13 @@ footer {
   }
 }
 
+
 .menu {
   opacity: 0;
   margin-left: -40px;
+  
 }
-
+@media screen {
 #sidenav {
   position: fixed;
   left: 0;
@@ -286,14 +274,24 @@ footer {
   bottom:0;
   overflow-x: hidden;
   overflow-y: auto;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.692);
   width: 260px;
 
   border-right: 1px dashed $conifer; //header;
 }
-
+  #sidenav.sidenav-open {
+      opacity: 100;
+      margin-left: 0;
+      transition: 0.5s;
+  }
+  #content.sidenav-open {
+      margin-left: 0;
+      transition: 0.5s;
+  }
+}
 .feather {
   height: 1.2em;
+  color: $conifer;
 }
 .icon-med {
   height: 2em;
@@ -320,6 +318,7 @@ footer {
   }
 #sidebar {
   display: none;
+  
 }
 #copyright-notice {
   display: none;
@@ -331,3 +330,35 @@ footer {
   display: block !important;
 }
 }
+.uk-nav-default {
+  font-size: 12px;
+}
+.blink_text {
+
+  animation:1s blinker linear infinite;
+  -webkit-animation:1s blinker linear infinite;
+  -moz-animation:1s blinker linear infinite;
+
+   color: $conifer;//$header;
+  }
+
+  @-moz-keyframes blinker {  
+   0% { opacity: 1.0; }
+   40%{ opacity: 0.0;}
+   60% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+   }
+
+  @-webkit-keyframes blinker {  
+   0% { opacity: 1.0; }
+   40%{ opacity: 0.0;}
+   60% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+   }
+
+  @keyframes blinker {  
+   0% { opacity: 1.0; }
+   40%{ opacity: 0.0;}
+   60% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+   }
