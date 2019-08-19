@@ -342,6 +342,26 @@ footer {
 
    color: $conifer;//$header;
   }
+  @-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    40%{ opacity: 0.0;}
+    60% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+    }
+ 
+   @-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    40%{ opacity: 0.0;}
+    60% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+    }
+ 
+   @keyframes blinker {  
+    0% { opacity: 1.0; }
+    40%{ opacity: 0.0;}
+    60% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+    } 
 $dataNum:9; 
 $name:"x86 ASM" "Javascript" "Powershell" "GOLang" "SQL" "VBScript" "Bash"  "Python" "C";
 $data:50% 40% 70% 22% 45% 40% 85% 88% 50%;
