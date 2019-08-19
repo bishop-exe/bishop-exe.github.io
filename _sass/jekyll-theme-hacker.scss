@@ -145,7 +145,7 @@ dt {
 
 ul li {
   //list-style-image:url('../images/bullet.png');
-
+list-style: disc;
 }
 
 blockquote {
@@ -234,6 +234,7 @@ footer {
 .main-content {
   height: 100%;
 }
+
 
 @media (max-width: 4620px){
   .menu {
@@ -341,24 +342,102 @@ footer {
 
    color: $conifer;//$header;
   }
+$dataNum:9; 
+$name:"x86 ASM" "Javascript" "Powershell" "GOLang" "SQL" "VBScript" "Bash"  "Python" "C";
+$data:50% 40% 70% 22% 45% 40% 85% 88% 50%;
 
-  @-moz-keyframes blinker {  
-   0% { opacity: 1.0; }
-   40%{ opacity: 0.0;}
-   60% { opacity: 0.0; }
-   100% { opacity: 1.0; }
-   }
+//General Settings
+$width:400px;
+$height:200px;
+$color:#d92b2b #e66a6a #d92b2b #e66a6a #d92b2b #e66a6a #d92b2b #e66a6a #d92b2b #e66a6a;
 
-  @-webkit-keyframes blinker {  
-   0% { opacity: 1.0; }
-   40%{ opacity: 0.0;}
-   60% { opacity: 0.0; }
-   100% { opacity: 1.0; }
-   }
 
-  @keyframes blinker {  
-   0% { opacity: 1.0; }
-   40%{ opacity: 0.0;}
-   60% { opacity: 0.0; }
-   100% { opacity: 1.0; }
-   }
+.igFrameBar{
+  width:$width;
+  height:$height;
+  position:relative;
+  background:#f2f2f200;
+  margin:15% auto 0px auto;
+  transform:translate(0,-50%);
+}
+.igFrameBar:before{
+  content:"";
+  width:100%;
+  height:1px;
+  background:rgba(255, 255, 255, 0);
+  position:absolute;
+  top:50%;
+}
+.igFrameBar:after{
+  content:"";
+  width:100%;
+  height:50%;
+  background:transparent;
+  position:absolute;
+  top:25%;
+  border-top:1px solid $conifer;
+  border-bottom:1px solid $conifer;
+}
+.igData{
+  width:20px;
+  position:absolute;
+  bottom:1px;
+  margin:0px 0px 0px 0px;
+  z-index:99;
+  float:left;
+}
+@for $i from 1 through $dataNum {
+    .igData#{$i} {
+       background:nth($color,$i);
+       height:0px;
+       left:$width/($dataNum+1) * $i - 10;
+       -webkit-animation: showBar#{$i} 1.2s $i*.1s forwards;
+       -moz-animation: showBar#{$i} 1.2s $i*.1s forwards;
+       animation: showBar#{$i} 1.2s $i*.1s forwards;
+    }
+}
+.igData:before{
+  position:absolute;
+  top:-16px;
+  font-size:12px;
+  font-weight:300;
+}
+@for $i from 1 through $dataNum {
+    .igData#{$i}:before {
+        content:nth($data,$i)+"";
+    }
+}
+.igData:after{
+  position:absolute;
+  bottom:-55px;
+  transform:rotate(30deg);
+  color:#666;
+  font-size:14px;
+  text-align:left;
+  font-weight:300;
+  width:150px;
+}
+@for $i from 1 through $dataNum {
+    .igData#{$i}:after{
+        content:nth($name,$i)+"";
+    }
+}
+
+@for $i from 1 through $dataNum {
+      @-webkit-keyframes showBar#{$i} {
+    0%   {height: 0px;}
+    100%  {height: nth($data,$i);}
+  }
+}
+@for $i from 1 through $dataNum {
+      @-moz-keyframes showBar#{$i} {
+    0%   {height: 0px;}
+    100%  {height: nth($data,$i);}
+  }
+}
+@for $i from 1 through $dataNum {
+      @keyframes showBar#{$i} {
+    0%   {height: 0px;}
+    100%  {height: nth($data,$i);}
+  }
+}
