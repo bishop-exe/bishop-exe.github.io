@@ -1,7 +1,11 @@
 feather.replace();
 window.onload = function() {
+    if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    closeSidenav();
+} else {
     openSidenav();
-  };
+}
+};
 function openSidenav() {
     document.getElementById("sidenav").classList.add("sidenav-open");
 }
