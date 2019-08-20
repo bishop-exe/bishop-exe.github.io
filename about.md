@@ -11,7 +11,6 @@ My name is Nicholas and I'm an ex-sysadmin that studied law who is trapped in a 
 #### Programming
 
 <div class="igFrameBar">
-EXPERT >
   <div class="igData igData1"></div>
   <div class="igData igData2"></div>
   <div class="igData igData3"></div>
