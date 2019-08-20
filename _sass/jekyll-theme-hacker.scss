@@ -50,13 +50,13 @@ header {
   width: 100%;
   border-bottom: 1px dashed $conifer; //header;
   padding: 0px 0;
-  margin: 0 0 40px 0px;
+  margin: 0 0 0px 0px;
 }
 
 header h1 {
   font-size: 30px;
   line-height: 1.5;
-  margin: 0 0 0 -40px;
+  margin: 0 0 0 0px;
   font-weight: bold;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color: $conifer;//$header;
@@ -92,11 +92,14 @@ header h2 {
 
 #main_content {
   width: 100%;
-
+  max-width: 700px;
+  margin: auto;
+  overflow-wrap: normal;
   -webkit-font-smoothing: antialiased;
 }
 section img {
-  max-width: 100%
+  max-width: 50%;
+  border-radius: 15px 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -200,7 +203,106 @@ hr {
 /* Links
    a, a:hover, a:visited
 */
+$dataNum:9; 
+$name:"x86 ASM" "Javascript" "Powershell" "GOLang" "SQL" "VBScript" "Bash"  "Python" "C";
+$data:50% 40% 70% 22% 45% 40% 85% 88% 50%;
 
+//General Settings
+$width:400px;
+$height:200px;
+$color:#d92b2b #e66a6a #d92b2b #e66a6a #d92b2b #e66a6a #d92b2b #e66a6a #d92b2b #e66a6a;
+
+
+.igFrameBar{
+  width:$width;
+  height:$height;
+  position:relative;
+  background:#f2f2f200;
+  margin:15% auto 0px auto;
+  transform:translate(0,-50%);
+}
+.igFrameBar:before{
+  content:"";
+  width:100%;
+  height:1px;
+  background:rgba(255, 255, 255, 0);
+  position:absolute;
+  top:50%;
+}
+.igFrameBar:after{
+  content:"";
+  width:100%;
+  height:50%;
+  background:transparent;
+  position:absolute;
+  top:25%;
+  z-index: -100;
+  border-top:1px solid $conifer;
+  border-bottom:1px solid $conifer;
+}
+.igData{
+  width:20px;
+  position:absolute;
+  bottom:1px;
+  margin:0px 0px 0px 0px;
+  z-index:-99;
+  float:left;
+}
+@for $i from 1 through $dataNum {
+    .igData#{$i} {
+       background:nth($color,$i);
+       height:0px;
+       left:$width/($dataNum+1) * $i - 10;
+       -webkit-animation: showBar#{$i} 1.2s $i*.1s forwards;
+       -moz-animation: showBar#{$i} 1.2s $i*.1s forwards;
+       animation: showBar#{$i} 1.2s $i*.1s forwards;
+    }
+}
+.igData:before{
+  position:absolute;
+  top:-16px;
+  font-size:12px;
+  font-weight:300;
+}
+@for $i from 1 through $dataNum {
+    .igData#{$i}:before {
+        content:nth($data,$i)+"";
+    }
+}
+.igData:after{
+  position:absolute;
+  bottom:-55px;
+  transform:rotate(30deg);
+
+  font-size:14px;
+  text-align:left;
+  font-weight:300;
+  width:150px;
+}
+@for $i from 1 through $dataNum {
+    .igData#{$i}:after{
+        content:nth($name,$i)+"";
+    }
+}
+
+@for $i from 1 through $dataNum {
+      @-webkit-keyframes showBar#{$i} {
+    0%   {height: 0px;}
+    100%  {height: nth($data,$i);}
+  }
+}
+@for $i from 1 through $dataNum {
+      @-moz-keyframes showBar#{$i} {
+    0%   {height: 0px;}
+    100%  {height: nth($data,$i);}
+  }
+}
+@for $i from 1 through $dataNum {
+      @keyframes showBar#{$i} {
+    0%   {height: 0px;}
+    100%  {height: nth($data,$i);}
+  }
+}
 a {
   color: #63c0f5;
   text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
@@ -240,11 +342,13 @@ footer {
   .menu {
       opacity: 100;
       margin-left: auto;
+      z-index: 99;
   }
   #sidenav {
-      margin-left: -260px;
+      margin-left: -200px;
       transition: 0.5s;
-      background: rgba(66, 64, 64, 0.993);
+      background: $body-background url("../images/cartographer.png");
+      z-index: 99;
   }
   #content {
       margin-left: 0px;
@@ -270,13 +374,14 @@ footer {
 @media screen {
 #sidenav {
   position: fixed;
+  z-index: 99;
   left: 0;
   top:0;
   bottom:0;
   overflow-x: hidden;
   overflow-y: auto;
-  background: rgba(0, 0, 0, 0.692);
-  width: 260px;
+  background: $body-background url("../images/cartographer.png")0 0;
+  width: 200px;
 
   border-right: 1px dashed $conifer; //header;
 }
@@ -362,102 +467,3 @@ footer {
    60% { opacity: 0.0; }
    100% { opacity: 1.0; }
    } 
-$dataNum:9; 
-$name:"x86 ASM" "Javascript" "Powershell" "GOLang" "SQL" "VBScript" "Bash"  "Python" "C";
-$data:50% 40% 70% 22% 45% 40% 85% 88% 50%;
-
-//General Settings
-$width:400px;
-$height:200px;
-$color:#d92b2b #e66a6a #d92b2b #e66a6a #d92b2b #e66a6a #d92b2b #e66a6a #d92b2b #e66a6a;
-
-
-.igFrameBar{
-  width:$width;
-  height:$height;
-  position:relative;
-  background:#f2f2f200;
-  margin:15% auto 0px auto;
-  transform:translate(0,-50%);
-}
-.igFrameBar:before{
-  content:"";
-  width:100%;
-  height:1px;
-  background:rgba(255, 255, 255, 0);
-  position:absolute;
-  top:50%;
-}
-.igFrameBar:after{
-  content:"";
-  width:100%;
-  height:50%;
-  background:transparent;
-  position:absolute;
-  top:25%;
-  border-top:1px solid $conifer;
-  border-bottom:1px solid $conifer;
-}
-.igData{
-  width:20px;
-  position:absolute;
-  bottom:1px;
-  margin:0px 0px 0px 0px;
-  z-index:99;
-  float:left;
-}
-@for $i from 1 through $dataNum {
-    .igData#{$i} {
-       background:nth($color,$i);
-       height:0px;
-       left:$width/($dataNum+1) * $i - 10;
-       -webkit-animation: showBar#{$i} 1.2s $i*.1s forwards;
-       -moz-animation: showBar#{$i} 1.2s $i*.1s forwards;
-       animation: showBar#{$i} 1.2s $i*.1s forwards;
-    }
-}
-.igData:before{
-  position:absolute;
-  top:-16px;
-  font-size:12px;
-  font-weight:300;
-}
-@for $i from 1 through $dataNum {
-    .igData#{$i}:before {
-        content:nth($data,$i)+"";
-    }
-}
-.igData:after{
-  position:absolute;
-  bottom:-55px;
-  transform:rotate(30deg);
-  color:#666;
-  font-size:14px;
-  text-align:left;
-  font-weight:300;
-  width:150px;
-}
-@for $i from 1 through $dataNum {
-    .igData#{$i}:after{
-        content:nth($name,$i)+"";
-    }
-}
-
-@for $i from 1 through $dataNum {
-      @-webkit-keyframes showBar#{$i} {
-    0%   {height: 0px;}
-    100%  {height: nth($data,$i);}
-  }
-}
-@for $i from 1 through $dataNum {
-      @-moz-keyframes showBar#{$i} {
-    0%   {height: 0px;}
-    100%  {height: nth($data,$i);}
-  }
-}
-@for $i from 1 through $dataNum {
-      @keyframes showBar#{$i} {
-    0%   {height: 0px;}
-    100%  {height: nth($data,$i);}
-  }
-}
