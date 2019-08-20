@@ -31,7 +31,6 @@ and use of:
 
 * REST APIs 
 * Microservices 
-* Docker
 * Git 
 * Make 
 * GitLab 
@@ -49,6 +48,14 @@ and use of:
 * Scrum 
 * Modular design
 * Test-driven development
+
+* * * 
+#### Virtualization/Container
+* Docker 
+* VMWare ESXi
+* VMWare Workstation
+* VirtualBox 
+* Vagrant
 
 * * * 
 #### Technologies & Interests
