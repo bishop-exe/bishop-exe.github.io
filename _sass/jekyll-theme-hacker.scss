@@ -50,12 +50,12 @@ header {
   width: 100%;
   border-bottom: 1px dashed $conifer; //header;
   padding: 0px 0;
-  margin: 0 0 0px 0px;
+  margin: 0 0 40px 0px;
 }
 
 header h1 {
-  font-size: 30px;
-  line-height: 1.5;
+  font-size: 24px;
+
   margin: 0 0 0 0px;
   font-weight: bold;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
@@ -65,6 +65,7 @@ header h1 {
                0 0 10px $shadow;
   letter-spacing: -1px;
   -webkit-font-smoothing: antialiased;
+  word-wrap: normal;
 }
 header .feather {
   height: 3.2em;

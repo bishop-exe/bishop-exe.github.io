@@ -3,6 +3,7 @@ layout: default
 ---
 
 ## About
+![Vinyl](assets\images\picography-laptop-code-notepad-mobile-small-1-768x512.jpg)
 
 My name is Nicholas and I'm an ex-sysadmin that studied law who is trapped in a cyber spaghetti western as a software dev.
 
