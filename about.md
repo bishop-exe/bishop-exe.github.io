@@ -3,13 +3,14 @@ layout: default
 ---
 
 # About
+<small><i>Im not really a pet exorcist unfortuanately =(</i></small>
 
 
 <ul uk-accordion="" class="uk-accordion">
           <li class="">
-          <h4>Me</h4>
-            <a class="uk-accordion-title code" href="#"><img src="assets\images\iphone-phone-watch-wood-table-desk-pen-glasses.jpg" alt="I dont own any of these things" /><h6>Would you like to know more?</h6></a>
+            <a class="uk-accordion-title code" href="#">About Me</a>
             <div class="uk-accordion-content" aria-hidden="true" hidden="">
+            <img src="assets\images\img\iphone-phone-watch-wood-table-desk-pen-glasses.jpg" alt="I dont own any of these things" />
               <p>My name is Nicholas and I'm an ex-sysadmin that studied law who is trapped in a cyber spaghetti western as a software dev.</p>
             </div>
           </li>
@@ -18,11 +19,10 @@ layout: default
 
 <ul uk-accordion="" class="uk-accordion">
           <li class="">
-          <h4>Programming Skills</h4>
-            <a class="uk-accordion-title code" href="#"><img src="assets\images\picography-closeup-code-screen-small-768x512.jpg" alt="I didnt write any of this code in the picture" /><h6>Would you like to know more?</h6></a>
+            <a class="uk-accordion-title code" href="#">Programming Skills</a>
             <div class="uk-accordion-content" aria-hidden="true" hidden="">
               
-
+<img src="assets\images\img\picography-closeup-code-screen-small-768x512.jpg" alt="I didnt write any of this code in the picture" />
 <div class="igFrameBar">
   <div class="igData igData1"></div>
   <div class="igData igData2"></div>
@@ -44,9 +44,9 @@ I also have a very strong fundamental background so I can pick things up purty q
 
 <ul uk-accordion="" class="uk-accordion">
           <li class="">
-          <h4>Back-end/DevOps</h4>
-            <a class="uk-accordion-title code" href="#"><img src="assets\images\picography-code-javascript-editor-small-768x512.jpg" alt="I dont own any of these things" /><h6>Would you like to know more?</h6></a>
+            <a class="uk-accordion-title code" href="#">Back-end/DevOps</a>
             <div class="uk-accordion-content" aria-hidden="true" hidden="">
+            <img src="assets\images\img\picography-code-javascript-editor-small-768x512.jpg" alt="I dont own any of these things" />
               <p>Development, integration, deployment,
 and use of:</p>
 
@@ -73,11 +73,10 @@ and use of:</p>
 
 <ul uk-accordion="" class="uk-accordion">
           <li class="">
-          <h4>Methodologies</h4>
-            <a class="uk-accordion-title code" href="#"><img src="assets\images\picography-man-writing-whiteboard-small-1-768x512.jpg" alt="Thats not me" /><h6>Would you like to know more?</h6></a>
+            <a class="uk-accordion-title code" href="#">Methodologies</a>
             <div class="uk-accordion-content" aria-hidden="true" hidden="">
 
-
+<img src="assets\images\img\picography-man-writing-whiteboard-small-1-768x512.jpg" alt="Thats not me" />
 <ol>
   <li> Agile</li>
   <li> XP </li>
@@ -96,9 +95,10 @@ and use of:</p>
 
 <ul uk-accordion="" class="uk-accordion">
           <li class="">
-          <h4>Virtualization/Container</h4>
-            <a class="uk-accordion-title code" href="#"><img src="assets\images\virt.jpg" alt="This picture has nothing to do with virtualization" /><h6>Would you like to know more?</h6></a>
+          <h4></h4>
+            <a class="uk-accordion-title code" href="#">Virtualization/Container</a>
             <div class="uk-accordion-content" aria-hidden="true" hidden="">
+            <img src="assets\images\img\virt.jpg" alt="This picture has nothing to do with virtualization" />
               <p>Development, integration, deployment,
 and use of:</p>
 
@@ -117,11 +117,10 @@ and use of:</p>
 * * *
 <ul uk-accordion="" class="uk-accordion">
           <li class="">
-          <h4>Other Technologies & Interests</h4>
-            <a class="uk-accordion-title code" href="#"><img src="assets\images\picography-southbank-skater-graffitti-tom-eversley-small-768x512.jpg" alt="I cant do a kickflip"><h6>Would you like to know more?</h6></a>
+            <a class="uk-accordion-title code" href="#">Other Technologies & Interests</a>
             <div class="uk-accordion-content" aria-hidden="true" hidden="">
 
-
+<img src="assets\images\img\picography-southbank-skater-graffitti-tom-eversley-small-768x512.jpg" alt="I cant do a kickflip">
 <ol>
   <li> Machine Learning</li>
   <li> Automation </li>

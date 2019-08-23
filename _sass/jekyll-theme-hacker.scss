@@ -8,14 +8,14 @@ $blockquote-color: $silver-chalice !default;
 $blockquote-border: $dove-grey !default;
 html{
   height: 100%;
-  background: $body-background url("../images/cartographer.png");
+  background: $body-background url("../images/img/cartographer.png");
 }
 
 body {
   margin: 0;
   padding: 0;
   top: 20px;
-  background: $body-background url("../images/cartographer.png");
+  background: $body-background url("../images/img/cartographer.png");
   height: 100%;
   color: $body-foreground;
   font-size: 12px;
@@ -305,8 +305,8 @@ $color:#d92b2b #e66a6a #d92b2b #e66a6a #d92b2b #e66a6a #d92b2b #e66a6a #d92b2b #
   }
 }
 a {
-  color: #63c0f5;
-  text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
+  color: #fb4834;
+  text-shadow: 0 0 5px $shadow;
 }
 
 /* Clearfix */
@@ -348,7 +348,7 @@ footer {
   #sidenav {
       margin-left: -200px;
       transition: 0.5s;
-      background: $body-background url("../images/cartographer.png");
+      background: $body-background url("../images/img/cartographer.png");
       z-index: 99;
   }
   #content {
@@ -381,7 +381,7 @@ footer {
   bottom:0;
   overflow-x: hidden;
   overflow-y: auto;
-  background: $body-background url("../images/cartographer.png")0 0;
+  background: $body-background url("../images/img/cartographer.png")0 0;
   width: 200px;
 
   border-right: 1px dashed $conifer; //header;
