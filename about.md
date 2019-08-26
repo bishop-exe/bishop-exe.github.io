@@ -3,7 +3,7 @@ layout: default
 ---
 
 # About
-<small><i>Im not really a pet exorcist unfortuanately =(</i></small>
+<li>Product Lead</li><li>Problem Solver</li><li>Software Developer</li><li>Pet Exorcist</li><li>Creator of Stuff</li>
 
 
 <ul uk-accordion="" class="uk-accordion">
@@ -11,7 +11,8 @@ layout: default
             <a class="uk-accordion-title code" href="#">About Me</a>
             <div class="uk-accordion-content" aria-hidden="true" hidden="">
             <img src="assets\images\img\iphone-phone-watch-wood-table-desk-pen-glasses.jpg" alt="I dont own any of these things" />
-              <p>My name is Nicholas and I'm an ex-sysadmin that studied law who is trapped in a cyber spaghetti western as a software dev.</p>
+              <p>My name is Nicholas and I'm an ex-sysadmin that studied law who is trapped in a cyber spaghetti western as a software dev.</p><small><i>Im not really a pet exorcist unfortuanately =(</i></small>
+
             </div>
           </li>
 </ul>
