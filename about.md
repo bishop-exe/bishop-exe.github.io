@@ -3,7 +3,7 @@ layout: default
 ---
 
 # About
-<li>Product Lead</li><li>Problem Solver</li><li>Software Developer</li><li>Pet Exorcist</li><li>Creator of Stuff</li>
+<li>Project Lead</li><li>Problem Solver</li><li>Software Developer</li><li>Pet Exorcist</li><li>Creator of Stuff</li>
 
 
 <ul uk-accordion="" class="uk-accordion">
