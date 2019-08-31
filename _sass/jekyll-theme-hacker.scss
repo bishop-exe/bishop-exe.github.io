@@ -102,7 +102,10 @@ section img {
   max-width: 50%;
   border-radius: 15px 50px;
 }
-
+.book{
+  height: 250px;
+  border-radius: 0px 0px;
+}
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
@@ -367,6 +370,7 @@ footer {
       transition: 0.5s;
   }
 }
+
 .icon{
 
   border-radius: 0px 0px 50px;
