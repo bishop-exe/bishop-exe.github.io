@@ -104,7 +104,26 @@ section img {
 }
 .book{
   height: 250px;
-  border-radius: 0px 0px;
+  border-radius: 15px;
+  padding: 10px;
+  filter: brightness(50%);
+}
+.book:hover{
+  height: 250px;
+  border-radius: 15px;
+  filter: brightness(100%) drop-shadow(8px 8px 10px $conifer);
+}
+  .svg{
+    height: 80px;
+    border-radius: 15px;
+    padding: 10px;
+    fill: $conifer;
+    filter: invert(35%) sepia(55%) saturate(3257%) hue-rotate(343deg) brightness(104%) contrast(97%);
+  }
+  .svg:hover{
+    height: 80px;
+    border-radius: 15px;
+    filter: invert(35%) sepia(55%) saturate(3257%) hue-rotate(343deg) brightness(40%) contrast(97%);
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
