@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+Below are some of my certs and education. I also won my high school science fair which is easily my greatest achievement.
 <ul uk-accordion="" class="uk-accordion">
           <li class="">
             <a class="uk-accordion-title code" href="#">Certifications</a>
