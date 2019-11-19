@@ -36,8 +36,10 @@ layout: default
   <div class="igData igData9"></div>
 
 </div>
+<div style="text-align: center;"><img class="svg" src="assets\images\svg\css3.svg" ><img class="svg" src="assets\images\svg\javascript.svg" ><img class="svg" src="assets\images\svg\ruby.svg" ><img class="svg" src="assets\images\svg\html5.svg" ><img class="svg" src="assets\images\svg\powershell.svg" ><img class="svg" src="assets\images\svg\python.svg" ><img class="svg" src="assets\images\svg\go.svg" ></div>
 I also have a very strong fundamental background so I can pick things up purty quick. <i>I mean look at this website?</i>
-<div style="text-align: center;"><small><i>The above graph has absolutely no accurate credibility and is for visual purposes</i></small></div>
+<div style="text-align: center;"
+><small><i>The above graph has absolutely no accurate credibility and is for visual purposes</i></small></div>
             </div>
           </li>
 </ul>
@@ -50,15 +52,13 @@ I also have a very strong fundamental background so I can pick things up purty q
             <img src="assets\images\img\picography-code-javascript-editor-small-768x512.jpg" alt="I dont own any of these things" />
               <p>Development, integration, deployment,
 and use of:</p>
-
+<img class="svg" src="assets\images\svg\ansible.svg" ><img class="svg" src="assets\images\svg\bitbucket.svg" ><img class="svg" src="assets\images\svg\git.svg" ><img class="svg" src="assets\images\svg\atlassian.svg" >
 <ol>
   <li> REST APIs</li>
   <li> Microservices </li>
   <li> Git </li>  
   <li> Make</li>
    <li> Atlassian Suite</li>
-  <li> GitLab </li>
-  <li> Git </li> 
    <li> SQL</li>
   <li> JSON </li>
   <li> YAML </li> 
@@ -102,7 +102,7 @@ and use of:</p>
             <img src="assets\images\img\virt.jpg" alt="This picture has nothing to do with virtualization" />
               <p>Development, integration, deployment,
 and use of:</p>
-
+<img class="svg" src="assets\images\svg\docker.svg" ><img class="svg" src="assets\images\svg\vagrant.svg" ><img class="svg" src="assets\images\svg\kubernetes.svg" >
 <ol>
   <li> Docker</li>
   <li> VMWare ESXi </li>

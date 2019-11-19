@@ -32,7 +32,7 @@ Below are some of my certs and education. I also won my high school science fair
   <dt><img src="assets\images\certs\umbc.png" alt="" height="200" width="200"></dt>
   <dd>C Programming</dd>
   <dt><img src="assets\images\certs\mantech.png" alt="" height="200" width="200"></dt>
-  <dd>ManTech Certified Advanced Cyber Programmer(In Progress)</dd>
+  <dd>ManTech Certified Advanced Cyber Programmer</dd>
 </dl>
 </div>
           </li>
