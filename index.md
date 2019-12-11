@@ -4,10 +4,10 @@ layout: default
 ## What is new you ask?
 
 
-[![zine](assets\images\img\mantech1.jpg)](\awards) 
+[![mantech](assets\images\img\mantech1.jpg)](\awards) 
 
 
-I graduated from Mantech's ADVANCED CYBER TRAINING PROGRAM recently! Picture realated.
+I graduated from [Mantech's ADVANCED CYBER TRAINING PROGRAM](https://www.mantech.com/advanced-cyber-training-program) recently! Picture realated.
 
 * * * 
 
