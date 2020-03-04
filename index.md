@@ -2,7 +2,14 @@
 layout: default
 ---
 ## What is new you ask?
+* * *
 
+[![git](assets\images\img\git.jpg)](\git_trick) 
+
+I found this cleaver little trick and I thought that it could be useful to share.
+
+
+* * *
 
 [![mantech](assets\images\img\mantech1.jpg)](\awards) 
 
